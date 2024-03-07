@@ -21,4 +21,15 @@ model Movie {
   imageUrl String
   detail   String
   releaseDate DateTime
+  reviews     Review[] 
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  movieId   Int
+  movie     Movie    @relation(fields: [movieId], references: [id])
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
