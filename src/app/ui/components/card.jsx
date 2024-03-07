@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
-export default function MovieCard({ title, content, date }) {
+export default function MovieCard({ id, title, content, date }) {
   return (
     <>
       <Card className="flex max-w-screen-md p-4 m-4">
@@ -17,7 +18,9 @@ export default function MovieCard({ title, content, date }) {
         <div>
           <CardHeader>
             <div className="header-content ml-6">
-              <CardTitle>{title}</CardTitle> {/* タイトルを動的に表示 */}
+              <Link href={`/review/${id}/create`}>
+                <CardTitle>{title}</CardTitle> {/* タイトルを動的に表示 */}
+              </Link>
             </div>
           </CardHeader>
           <CardContent>

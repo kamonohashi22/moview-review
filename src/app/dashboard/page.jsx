@@ -18,6 +18,7 @@ export default async function Home() {
           {movies.map((movie) => (
             <div className="w-1/2 p-2" key={movie.id}>
               <MovieCard
+                id={movie.id}
                 title={movie.title}
                 content={movie.detail}
                 date={movie.releaseDate.toDateString()}
