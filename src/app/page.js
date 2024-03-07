@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Textarea } from "@/components/ui/textarea"
-
+import { Button } from "@/components/ui/button"
 import MovieCard from "./ui/components/card";
 import CreateCard from "./ui/components/createcard";
+import { TextareaWithButton } from "./ui/components/search";
+
 
 export default function Home() {
   return (
