@@ -2,6 +2,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Calendar } from "@/components/ui/calendar"
 import { React } from "react"
 import { DatePickerDemo } from "./calender";
+import { ComboboxDemo } from "./combobox";
 
 
   
@@ -10,6 +11,7 @@ import { DatePickerDemo } from "./calender";
       <>
       <Textarea />
       <DatePickerDemo/>
+      <ComboboxDemo/>
       </>
     );
   }
