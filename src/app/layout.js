@@ -12,8 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <SideNav />
-      <body className={inter.className}>{children}</body>
+      <div className="flex min-h-screen">
+  <div className="w-64"> 
+    <SideNav />
+  </div>
+  <div className="flex-1"> 
+    <div className={inter.className}>{children}</div>
+  </div>
+</div>
     </html>
   );
 }
