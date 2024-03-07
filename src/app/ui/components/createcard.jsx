@@ -14,8 +14,10 @@ import { Button } from "@/components/ui/button"
       <Textarea placeholder="レビューを入力してください" />
   </div>
   <div className="flex max-w-screen-md p-4 m-4">
-  <DatePickerDemo />
   <ComboboxDemo />
+  </div>
+  <div className="flex max-w-screen-md p-4 m-4">
+  <DatePickerDemo />
   </div>
 
 </>

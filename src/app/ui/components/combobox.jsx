@@ -62,7 +62,6 @@ export function ComboboxDemo() {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          
           <CommandEmpty>No review</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
