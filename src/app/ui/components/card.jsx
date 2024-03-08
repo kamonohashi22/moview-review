@@ -12,7 +12,7 @@ export default function MovieCard({ title, content, date }) {
     <>
       <Card className="flex max-w-screen-md p-4 m-4">
         <CardContent className="w-1/2 object-contain">
-          <img src="https://placehold.jp/300x200.png" />
+          <img src="https://placehold.jp/300x400.png" />
         </CardContent>
         <div>
           <CardHeader>
