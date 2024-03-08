@@ -3,16 +3,25 @@ import { Calendar } from "@/components/ui/calendar"
 import { React } from "react"
 import { DatePickerDemo } from "./calender";
 import { ComboboxDemo } from "./combobox";
+import { Button } from "@/components/ui/button"
 
 
   
   export default function CreateCard() {
     return (
-      <>
-      <Textarea />
-      <DatePickerDemo/>
-      <ComboboxDemo/>
-      </>
+<>
+  <div className="flex max-w-screen-md p-4 m-4">
+      <Textarea placeholder="レビューを入力してください" />
+  </div>
+  <div className="flex max-w-screen-md p-4 m-4">
+  <ComboboxDemo />
+  </div>
+  <div className="flex max-w-screen-md p-4 m-4">
+  <DatePickerDemo />
+  </div>
+
+</>
+
     );
   }
 

@@ -20,24 +20,24 @@ import {
 
 const frameworks = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "★",
+    label: "★",
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "★★",
+    label: "★★",
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
+    value: "★★★",
+    label: "★★★",
   },
   {
-    value: "remix",
-    label: "Remix",
+    value: "★★★★",
+    label: "★★★★",
   },
   {
-    value: "astro",
-    label: "Astro",
+    value: "★★★★★",
+    label: "★★★★★",
   },
 ]
 
@@ -56,14 +56,13 @@ export function ComboboxDemo() {
         >
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
-            : "Select framework..."}
+            : "評価"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandEmpty>No review</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem

@@ -10,6 +10,7 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { User } from 'lucide-react';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
@@ -20,7 +21,7 @@ const links = [
     href: '/review',
     icon: ChatBubbleOvalLeftIcon,
   },
-  { name: 'Mypage', href: '/mypage', icon: PencilIcon },
+  { name: 'マイページ', href: '/mypage', icon: User },
 ];
 
 export default function NavLinks() {
