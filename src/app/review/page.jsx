@@ -15,6 +15,7 @@ import CreateCard from "../ui/components/createcard";
 export default function Home() {
   const reviews = [
     {
+      id: 1,
       movieId: 1,
       rating: 5,
       comment: "素晴らしい映画でした！",
@@ -22,6 +23,7 @@ export default function Home() {
       updatedAt: "2023-03-01T12:00:00Z",
     },
     {
+      id: 2,
       movieId: 2,
       rating: 4,
       comment: "楽しめましたが、少し長い感じがしました。",
@@ -29,6 +31,7 @@ export default function Home() {
       updatedAt: "2023-03-02T13:00:00Z",
     },
     {
+      id: 3,
       movieId: 1,
       rating: 3,
       comment: "まあまあです。",
@@ -36,6 +39,7 @@ export default function Home() {
       updatedAt: "2023-03-03T14:30:00Z",
     },
     {
+      id: 4,
       movieId: 3,
       rating: 2,
       comment: "期待はずれでした。",
@@ -43,6 +47,7 @@ export default function Home() {
       updatedAt: "2023-03-04T15:45:00Z",
     },
     {
+      id: 5,
       movieId: 2,
       rating: 5,
       comment: "最高の体験でした！",
@@ -50,6 +55,7 @@ export default function Home() {
       updatedAt: "2023-03-05T16:20:00Z",
     },
     {
+      id: 6,
       movieId: 4,
       rating: 4,
       comment: "非常に良い映画です。",
@@ -57,6 +63,7 @@ export default function Home() {
       updatedAt: "2023-03-06T17:50:00Z",
     },
     {
+      id: 7,
       movieId: 3,
       rating: 3,
       comment: "普通の映画。",
@@ -64,6 +71,7 @@ export default function Home() {
       updatedAt: "2023-03-07T18:30:00Z",
     },
     {
+      id: 8,
       movieId: 5,
       rating: 1,
       comment: "全く楽しめませんでした。",
@@ -71,6 +79,7 @@ export default function Home() {
       updatedAt: "2023-03-08T19:15:00Z",
     },
     {
+      id: 9,
       movieId: 4,
       rating: 5,
       comment: "また見たい！",
@@ -78,6 +87,7 @@ export default function Home() {
       updatedAt: "2023-03-09T20:00:00Z",
     },
     {
+      id: 10,
       movieId: 5,
       rating: 4,
       comment: "良いストーリーでした。",
@@ -89,10 +99,11 @@ export default function Home() {
     <main>
       <div className="bg-slate-300">
         <h1 className="p-4 text-6xl font-bold text-gray-700">Review</h1>
+
         <div className="flex flex-wrap -mx-2">
           {reviews.map((review) => (
             // 各カードをflex-basisを使用して幅を調整します。この例では50%の幅で、paddingのためにmx-2を追加しています。
-            <div className="w-1/2 p-2">
+            <div className="w-1/2 p-2" key={review.id}>
               <CardContent className="object-contain mb-4">
                 <img src="https://placehold.jp/300x400.png" />
               </CardContent>

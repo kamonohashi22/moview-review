@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 export function TextareaWithButton() {
   return (
@@ -7,5 +7,5 @@ export function TextareaWithButton() {
       <Textarea placeholder="Type your message here." />
       <Button>検索</Button>
     </div>
-  )
+  );
 }
