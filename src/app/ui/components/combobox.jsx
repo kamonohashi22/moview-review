@@ -9,7 +9,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
 } from "@/components/ui/command";
 import {
@@ -68,7 +67,6 @@ export function ComboboxDemo() {
               <CommandItem
                 key={framework.value}
                 value={framework.value}
-                name="rating"
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
@@ -86,6 +84,7 @@ export function ComboboxDemo() {
           </CommandGroup>
         </Command>
       </PopoverContent>
+      <input type="hidden" name="rating" value={value} />
     </Popover>
   );
 }
