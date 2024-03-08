@@ -20,23 +20,23 @@ import {
 
 const frameworks = [
   {
-    value: "★",
+    value: "1",
     label: "★",
   },
   {
-    value: "★★",
+    value: "2",
     label: "★★",
   },
   {
-    value: "★★★",
+    value: "3",
     label: "★★★",
   },
   {
-    value: "★★★★",
+    value: "4",
     label: "★★★★",
   },
   {
-    value: "★★★★★",
+    value: "5",
     label: "★★★★★",
   },
 ];
@@ -68,6 +68,7 @@ export function ComboboxDemo() {
               <CommandItem
                 key={framework.value}
                 value={framework.value}
+                name="rating"
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);

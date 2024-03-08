@@ -1,29 +1,39 @@
-// app/review/[id]/create.page.js
 "use client";
-export default function ReviewCreate({ id }) {
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const reviewData = Object.fromEntries(formData.entries());
 
-    // ここでreviewDataを使ってレビューをデータベースに保存する処理を実装
-  };
+import { useRouter } from "next/navigation"; // useRouterフックをインポート
+import CreateCard from "../../../ui/components/createcard";
+import { reviewPost } from "../create.action.server";
+import ReviewForm from "@/app/ui/components/reviewForm";
+
+export default function ReviewCreate() {
+  const router = useRouter(); // useRouterフックを使ってルーターオブジェクトを取得
+
+  const { id } = router; // ルーターのクエリオブジェクトからidを取得
+
+  async function onSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    // idがundefinedでないことを確認
+    if (id) {
+      const response = await fetch(`/review/${id}/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" }, // ヘッダーを設定
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      if (!response.ok) {
+        console.error("レスポンスエラー", await response.text());
+        return;
+      }
+      const data = await response.json();
+    } else {
+      console.error("IDが未定義です");
+    }
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>レビュー作成</h1>
-      <div>
-        <label htmlFor="rating">評価:</label>
-        <input type="number" id="rating" name="rating" required />
-      </div>
-      <div>
-        <label htmlFor="comment">コメント:</label>
-        <textarea id="comment" name="comment" required />
-      </div>
-      <button type="submit">送信</button>
+    <form action={reviewPost}>
+      <ReviewForm />
     </form>
   );
 }
-
-// ここでサーバーコンポーネントを使用して映画のIDを取得する処理を実装
-// データ取得のロジックは略
