@@ -20,6 +20,7 @@ export default async function Home() {
               <MovieCard
                 id={movie.id}
                 title={movie.title}
+                imageUrl={movie.imageUrl}
                 content={movie.detail}
                 date={movie.releaseDate.toDateString()}
               />

@@ -8,12 +8,12 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-export default function MovieCard({ id, title, content, date }) {
+export default function MovieCard({ id, title, imageUrl, content, date }) {
   return (
     <>
       <Card className="flex max-w-screen-md p-4 m-4">
         <CardContent className="w-1/2 object-contain">
-          <img src="https://placehold.jp/300x200.png" />
+          <img src={imageUrl} />
         </CardContent>
         <div>
           <CardHeader>
