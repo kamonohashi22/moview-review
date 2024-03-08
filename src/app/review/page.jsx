@@ -89,6 +89,7 @@ export default function Home() {
     <main>
       <div className="bg-slate-300">
         <h1 className="p-4 text-6xl font-bold text-gray-700">Review</h1>
+
         <div className="flex flex-wrap -mx-2">
           {reviews.map((review) => (
             // 各カードをflex-basisを使用して幅を調整します。この例では50%の幅で、paddingのためにmx-2を追加しています。
